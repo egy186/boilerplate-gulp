@@ -1,0 +1,28 @@
+{
+  "name": "boilerplate-gulp",
+  "description": "boilerplate for web projects with gulp",
+  "version": "0.1.0",
+  "author": "egy186",
+  "bugs": {
+    "url": "https://github.com/egy186/boilerplate-gulp/issues"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "gulp": "^3.9.0",
+    "require-dir": "^0.3.0"
+  },
+  "homepage": "https://github.com/egy186/boilerplate-gulp#readme",
+  "keywords": [
+    "boilerplate",
+    "gulp"
+  ],
+  "license": "MIT",
+  "main": "gulpfile.babel.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egy186/boilerplate-gulp.git"
+  },
+  "scripts": {
+    "start": "gulp"
+  }
+}
