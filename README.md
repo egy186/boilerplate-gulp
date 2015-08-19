@@ -12,5 +12,9 @@ start
 ## gulp --tasks
 
 ```
-└── default
+├─┬ default
+│ └── lint
+├── lint:js
+└─┬ lint
+  └── lint:js
 ```
