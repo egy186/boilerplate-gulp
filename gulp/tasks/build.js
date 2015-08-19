@@ -26,8 +26,9 @@ gulp.task('build:html', () => {
 });
 
 gulp.task('build:js', () => {
+  const filename = config.js.src.slice(config.js.src.lastIndexOf('/') + 1);
   return browserify({ debug: true }).transform(babelify).require(config.js.src, { entry: true }).bundle()
-    .pipe(source('bundle.js'))
+    .pipe(source(filename))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
