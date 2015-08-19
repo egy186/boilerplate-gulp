@@ -19,6 +19,10 @@ export const build = {
   }
 };
 
+export const clean = {
+  src: dest
+};
+
 export const lint = {
   js: {
     src: ['./**/*.js', '!./node_modules/**']

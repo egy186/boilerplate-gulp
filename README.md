@@ -12,6 +12,8 @@ Lifecycle scripts included in boilerplate-gulp:
 available via `npm run-script`:
   build
     gulp build
+  clean
+    gulp clean
 ```
 
 ## gulp --tasks
@@ -24,7 +26,9 @@ available via `npm run-script`:
 │ ├── build:css
 │ ├── build:html
 │ └── build:js
+├── clean
 ├─┬ default
+│ ├── clean
 │ ├── lint
 │ └── build
 ├── lint:js
