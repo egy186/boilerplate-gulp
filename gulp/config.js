@@ -16,6 +16,10 @@ export const build = {
   js: {
     dest: dest + '/js',
     files: [src + '/js/app.js']
+  },
+  static: {
+    dest,
+    src: src + '/static/**'
   }
 };
 

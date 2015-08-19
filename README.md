@@ -22,10 +22,12 @@ available via `npm run-script`:
 ├── build:css
 ├── build:html
 ├── build:js
+├── build:static
 ├─┬ build
 │ ├── build:css
 │ ├── build:html
-│ └── build:js
+│ ├── build:js
+│ └── build:static
 ├── clean
 ├─┬ default
 │ ├── clean

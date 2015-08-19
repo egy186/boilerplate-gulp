@@ -39,4 +39,9 @@ gulp.task('build:js', () => {
   }));
 });
 
-gulp.task('build', ['build:css', 'build:html', 'build:js']);
+gulp.task('build:static', () => {
+  return gulp.src(config.static.src)
+    .pipe(gulp.dest(config.static.dest));
+});
+
+gulp.task('build', ['build:css', 'build:html', 'build:js', 'build:static']);
