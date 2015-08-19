@@ -5,15 +5,24 @@ Boilerplate for web projects with gulp.
 ## npm run
 
 ```
-start
-  gulp
+Lifecycle scripts included in boilerplate-gulp:
+  start
+    gulp
+
+available via `npm run-script`:
+  build
+    gulp build
 ```
 
 ## gulp --tasks
 
 ```
+├── build:js
+├─┬ build
+│ └── build:js
 ├─┬ default
-│ └── lint
+│ ├── lint
+│ └── build
 ├── lint:js
 └─┬ lint
   └── lint:js
