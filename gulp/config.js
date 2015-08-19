@@ -1,6 +1,10 @@
 const dest = './dist';
 const src = './src';
 
+export const bower = {
+  dest: dest + '/lib'
+};
+
 export const build = {
   css: {
     dest: dest + '/css',

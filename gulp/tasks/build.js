@@ -44,4 +44,4 @@ gulp.task('build:static', () => {
     .pipe(gulp.dest(config.static.dest));
 });
 
-gulp.task('build', ['build:css', 'build:html', 'build:js', 'build:static']);
+gulp.task('build', ['bower', 'build:css', 'build:html', 'build:js', 'build:static']);

@@ -19,11 +19,15 @@ available via `npm run-script`:
 ## gulp --tasks
 
 ```
+├── bower:install
+├─┬ bower
+│ └── bower:install
 ├── build:css
 ├── build:html
 ├── build:js
 ├── build:static
 ├─┬ build
+│ ├── bower
 │ ├── build:css
 │ ├── build:html
 │ ├── build:js
