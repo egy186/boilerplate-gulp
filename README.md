@@ -17,8 +17,10 @@ available via `npm run-script`:
 ## gulp --tasks
 
 ```
+├── build:css
 ├── build:js
 ├─┬ build
+│ ├── build:css
 │ └── build:js
 ├─┬ default
 │ ├── lint
