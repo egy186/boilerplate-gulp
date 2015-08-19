@@ -6,6 +6,13 @@ export const build = {
     dest: dest + '/css',
     src: src + '/less/style.less'
   },
+  html: {
+    src: src + '/jade/index.jade',
+    dest,
+    options: {
+      data: {}
+    }
+  },
   js: {
     dest: dest + '/js',
     src: src + '/js/app.js'
