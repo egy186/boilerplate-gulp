@@ -15,7 +15,7 @@ export const build = {
   },
   js: {
     dest: dest + '/js',
-    src: src + '/js/app.js'
+    files: [src + '/js/app.js']
   }
 };
 

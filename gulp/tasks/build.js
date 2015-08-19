@@ -4,6 +4,7 @@ import buffer from 'vinyl-buffer';
 import gulp from 'gulp';
 import jade from 'gulp-jade';
 import less from 'gulp-less';
+import merge from 'merge-stream';
 import minify from 'gulp-minify-css';
 import source from 'vinyl-source-stream';
 import sourcemaps from 'gulp-sourcemaps';
@@ -26,14 +27,16 @@ gulp.task('build:html', () => {
 });
 
 gulp.task('build:js', () => {
-  const filename = config.js.src.slice(config.js.src.lastIndexOf('/') + 1);
-  return browserify({ debug: true }).transform(babelify).require(config.js.src, { entry: true }).bundle()
-    .pipe(source(filename))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(config.js.dest));
+  return merge(config.js.files.map(src => {
+    const filename = src.slice(src.lastIndexOf('/') + 1);
+    return browserify({ debug: true }).transform(babelify).require(src, { entry: true }).bundle()
+      .pipe(source(filename))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(config.js.dest));
+  }));
 });
 
 gulp.task('build', ['build:css', 'build:html', 'build:js']);
