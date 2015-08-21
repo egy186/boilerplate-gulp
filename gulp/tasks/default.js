@@ -1,3 +1,3 @@
 import gulp from 'gulp';
 
-gulp.task('default', ['clean', 'lint', 'build']);
+gulp.task('default', ['clean', 'lint', 'build', 'watch']);

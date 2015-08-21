@@ -36,8 +36,10 @@ available via `npm run-script`:
 ├─┬ default
 │ ├── clean
 │ ├── lint
-│ └── build
+│ ├── build
+│ └── watch
 ├── lint:js
-└─┬ lint
-  └── lint:js
+├─┬ lint
+│ └── lint:js
+└── watch
 ```

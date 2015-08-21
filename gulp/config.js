@@ -36,3 +36,10 @@ export const lint = {
     src: ['./**/*.js', '!./node_modules/**']
   }
 };
+
+export const watch = {
+  css: src + '/less/**',
+  html: src + '/jade/**',
+  js: src + '/js/**',
+  static: src + '/static/**'
+};
