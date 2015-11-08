@@ -22,6 +22,7 @@ available via `npm run-script`:
 ├── bower:install
 ├─┬ bower
 │ └── bower:install
+├── browsersync
 ├── build:css
 ├── build:html
 ├── build:js
@@ -41,5 +42,6 @@ available via `npm run-script`:
 ├── lint:js
 ├─┬ lint
 │ └── lint:js
-└── watch
+└─┬ watch
+  └── browsersync
 ```

@@ -5,6 +5,15 @@ export const bower = {
   dest: dest + '/lib'
 };
 
+export const browsersync = {
+  options: {
+    open: false,
+    server: {
+      baseDir: dest
+    }
+  }
+};
+
 export const build = {
   css: {
     dest: dest + '/css',
